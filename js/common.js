@@ -11,7 +11,7 @@ const totalPercent = document.getElementById('total__percent');
 const amountPerMonth = document.getElementById('amountPerMonth');
 const total = document.getElementById('total');
 let currentPercent = 30;
-let currentAmount = 30000;
+let currentAmount = 20000;
 let currentReinvestition = 0;
 const definePercentTab = () => {
   tabs.forEach((item,index) => {
@@ -32,7 +32,7 @@ tabs.forEach((item) => {
         break;
       case '30':
         currentPercent = Number(tabValue);
-        currentAmount = 30000;
+        currentAmount = 20000;
         calc();
         break;
     };
