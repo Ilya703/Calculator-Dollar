@@ -1,1 +1,80 @@
-
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<title>Калькулятор</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+</head>
+<body>
+	<div class="slider__container">
+		<div class="block">
+			<div class="yellow__block">
+				<div class="text__box">
+					<div class="flex__box">
+						<p class="name__block">Сумма</p>
+						<p class="name__block" id="amount">50 000 $</p>
+					</div>
+					<div class="line__light"></div>
+				</div>
+				<input type="range" min="50000" max="500000" value="1000" step="1000" class="slider slider1" oninput="range1()">
+				<div class="text__box">
+					<div class="flex__box">
+						<p class="name__block">Ставка</p>
+						<p class="name__block" id="percent">15 %</p>
+					</div>
+					<div class="line__light"></div>
+				</div>
+				<div class="tabs">
+					<div class="tab active" data-percent="15">15 %</div>
+					<div class="tab" data-percent="30">30 %</div>
+				</div>
+				<div class="text__box">
+					<div class="flex__box">
+						<p class="name__block">Реинвестиции</p>
+						<p class="name__block" id="reinvestition">0 %</p>
+					</div>
+					<div class="line__light"></div>
+				</div>
+				<input type="range" min="0" max="100" value="0" class="slider slider2" oninput="range2()">
+			</div>
+		</div>
+		<div class="brown__block">
+			<div class="result__box" data-id="1">
+				<div class="flex__box">
+					<p class="value__block">Вклад</p>
+					<p class="value__block" id="total__amount">50 000 $</p>
+				</div>
+				<div class="line__yellow"></div>
+			</div>
+			<p class="note" id="note__amount">Сумма - 50 000 $</p>
+			<p class="note" id="note__reinvestition">Реинвестиции - 0 $</p>
+			<div class="result__box" data-id="2">
+				<div class="flex__box">
+					<p class="value__block">Ставка</p>
+					<p class="value__block" id="total__percent">15 %</p>
+				</div>
+				<div class="line__yellow"></div>
+			</div>
+			<div class="result__box" data-id="3">
+				<div class="flex__box">
+					<p class="value__block">Выплаты в месяц</p>
+					<p class="value__block" id="amountPerMonth">625 $</p>
+				</div>
+				<div class="line__yellow"></div>
+			</div>
+			<div class="result__box" data-id="4">
+				<div class="flex__box">
+					<p class="value__block">Итого за год</p>
+					<p class="value__block" id="total">57 500 $</p>
+				</div>
+				<div class="line__yellow"></div>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript" src="js/common.js"></script>
+</body>
+</html>
