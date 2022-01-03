@@ -1,5 +1,6 @@
 const amount = document.getElementById('amount');
 const percent = document.getElementById('percent');
+const slider0 = document.querySelector('.slider0');
 const slider1 = document.querySelector('.slider1');
 const slider2 = document.querySelector('.slider2');
 const tabs = document.querySelectorAll('.tab');
@@ -20,6 +21,7 @@ const definePercentTab = () => {
       tabs[index].classList.add('active');
     };
   });
+  slider0.value = currentPercent / 15;
 };
 tabs.forEach((item) => {
   item.addEventListener('click', () => {
@@ -39,6 +41,16 @@ tabs.forEach((item) => {
   });
   definePercentTab();
 });
+const range0 = () => {
+  currentPercent = Number(slider0.value) * 15;
+  definePercentTab();
+  if(currentPercent == 30){
+    currentAmount = 20000;
+  } else {
+    currentAmount = 50000;
+  }
+  calc();
+};
 const range1 = () => {
   currentAmount = Number(slider1.value);
   amount.innerHTML = `${currentAmount.toLocaleString()} $`;
