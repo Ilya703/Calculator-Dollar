@@ -39,16 +39,6 @@ div, p, input, button, form, span, a, ul, li {
     line-height: 21px;
     color: #585F69;
 }
-.name__title{
-    font-family: Roboto;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 18px;
-    line-height: 21px;
-    text-align: center;
-    color: #585F69;
-    margin-bottom: 18px;
-}
 .slider {
     -webkit-appearance: none;
     appearance: none;
