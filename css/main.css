@@ -14,7 +14,6 @@ div, p, input, button, form, span, a, ul, li {
     margin: 0 auto;
     display: flex;
     justify-content: center;
-    align-items: center;
     font-family: 'Roboto', sans-serif;
 }
 .flex__box{
@@ -117,7 +116,7 @@ div, p, input, button, form, span, a, ul, li {
 .brown__block{
     background: #FFEEC8;
     border-radius: 5px;
-    padding: 80px 40px;
+    padding: 70px 40px;
 }
 .line__yellow{
     background: #9C8061;
