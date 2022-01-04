@@ -30,13 +30,13 @@ tabs.forEach((item) => {
       case '15':
         currentPercent = Number(tabValue);
         currentAmount = 50000;
-        slider1.min = 50000;
+        // slider1.min = 50000;
         calc();
         break;
       case '30':
         currentPercent = Number(tabValue);
         currentAmount = 20000;
-        slider1.min = 20000;
+        // slider1.min = 20000;
         calc();
         break;
     };
@@ -55,6 +55,10 @@ const range0 = () => {
 };
 const range1 = () => {
   currentAmount = Number(slider1.value);
+  if (currentPercent == 15 && currentAmount < 50000) {
+    currentAmount = 50000;
+    slider1.value = 50000;
+  }
   amount.innerHTML = `${currentAmount.toLocaleString()} $`;
   noteAmount.innerHTML = `Сумма - ${currentAmount.toLocaleString()} $`;
   calc();
