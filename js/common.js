@@ -11,8 +11,8 @@ const noteReinvestition = document.getElementById('note__reinvestition');
 const totalPercent = document.getElementById('total__percent');
 const amountPerMonth = document.getElementById('amountPerMonth');
 const total = document.getElementById('total');
-let currentPercent = 30;
-let currentAmount = 20000;
+let currentPercent = 15;
+let currentAmount = 50000;
 let currentReinvestition = 0;
 const definePercentTab = () => {
   tabs.forEach((item,index) => {
@@ -30,11 +30,13 @@ tabs.forEach((item) => {
       case '15':
         currentPercent = Number(tabValue);
         currentAmount = 50000;
+        slider1.min = 50000;
         calc();
         break;
       case '30':
         currentPercent = Number(tabValue);
         currentAmount = 20000;
+        slider1.min = 20000;
         calc();
         break;
     };
@@ -71,11 +73,6 @@ const calc = () => {
     noteAmount.style.display = 'none';
     noteReinvestition.style.display = 'none';
   }
-  switch(true){
-    case currentAmount < 50000: 
-      currentPercent = 30;
-      break;
-  };
   definePercentTab();
   percent.innerHTML = `${currentPercent} %`;
   totalPercent.innerHTML = `${currentPercent} %`;
