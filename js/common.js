@@ -10,6 +10,7 @@ const noteAmount = document.getElementById('note__amount');
 const noteReinvestition = document.getElementById('note__reinvestition');
 const totalPercent = document.getElementById('total__percent');
 const amountPerMonth = document.getElementById('amountPerMonth');
+const amountPerYear = document.getElementById('amountPerYear');
 const total = document.getElementById('total');
 let currentPercent = 15;
 let currentAmount = 50000;
@@ -98,5 +99,6 @@ const calc = () => {
   };
   sum += remainsAmount;
   amountPerMonth.innerHTML = `${Math.floor(remains).toLocaleString()} $`;
+  amountPerYear.innerHTML = `${(Math.floor(remains) * 12).toLocaleString()} $`;
   total.innerHTML = `${Math.floor(sum).toLocaleString()} $`;
 };

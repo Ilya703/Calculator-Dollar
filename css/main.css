@@ -116,7 +116,7 @@ div, p, input, button, form, span, a, ul, li {
 .brown__block{
     background: #FFEEC8;
     border-radius: 5px;
-    padding: 60px 40px;
+    padding: 36px 40px;
 }
 .line__yellow{
     background: #9C8061;
@@ -131,7 +131,7 @@ div, p, input, button, form, span, a, ul, li {
     margin-top: 24px;
     margin-bottom: 24px;
 }
-.result__box[data-id="3"]{
+.result__box[data-id="3"], .result__box[data-id="4"]{
     margin-bottom: 24px;
 }
 .result__box[data-id="1"]{
