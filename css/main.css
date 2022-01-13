@@ -116,7 +116,7 @@ div, p, input, button, form, span, a, ul, li {
 .brown__block{
     background: #FFEEC8;
     border-radius: 5px;
-    padding: 36px 40px;
+    padding: 28px 40px;
 }
 .line__yellow{
     background: #9C8061;
@@ -154,6 +154,9 @@ div, p, input, button, form, span, a, ul, li {
     color: #585F69;
     margin-bottom: 6px;
     display: none;
+}
+#note__total, #note__payment {
+    display: block;
 }
 @media screen and (max-width: 780px){
     .slider__container{
