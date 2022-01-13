@@ -88,6 +88,7 @@ const calc = () => {
   noteReinvestition.innerHTML = `Реинвестиции - ${Math.floor(reinvestitionAmount).toLocaleString()} $`;
   let remains = (currentAmount * currentPercent / 100) - reinvestitionAmount;
   totalAmount.innerHTML = `${Math.floor(currentAmount + reinvestitionAmount).toLocaleString()} $`;
+  noteTotal.innerHTML = `Вклад - ${Math.floor(currentAmount + reinvestitionAmount).toLocaleString()} $`;
   let sum = currentAmount;
   let remainsAmount = 0;
   for(let i = 0; i < 12; i++){
@@ -100,7 +101,6 @@ const calc = () => {
   };
   sum += remainsAmount;
   amountPerMonth.innerHTML = `${Math.floor(remains).toLocaleString()} $`;
-  noteTotal.innerHTML = `Вклад - ${currentAmount.toLocaleString()} $`;
   notePayment.innerHTML = `Выплаты - ${(Math.floor(remains) * 12).toLocaleString()} $`;
   total.innerHTML = `${Math.floor(sum).toLocaleString()} $`;
 };

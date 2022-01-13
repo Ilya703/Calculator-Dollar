@@ -117,6 +117,8 @@ div, p, input, button, form, span, a, ul, li {
     background: #FFEEC8;
     border-radius: 5px;
     padding: 28px 40px;
+    display: flex;
+    align-items: center;
 }
 .line__yellow{
     background: #9C8061;
